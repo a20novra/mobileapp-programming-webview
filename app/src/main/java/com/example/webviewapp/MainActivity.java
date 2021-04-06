@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         WebView myWebView = (WebView) findViewById(R.id.my_webview);
+        myWebView.loadUrl("https://his.se");
 
         /*
         * Rename your App. Tip: Values->Strings
@@ -60,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
         * Take two screenshots using the "Take a screenshot" tool in the AVD
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
-        */
+
         WebView myWebView = new WebView( this);
         setContentView(myWebView);
         myWebView.loadUrl("https://his.se");
-
+  */
     }
 
     @Override
