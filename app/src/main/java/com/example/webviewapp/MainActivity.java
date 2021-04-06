@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
+        WebView myWebView = (WebView) findViewById(R.id.my_webview);
+
         /*
         * Rename your App. Tip: Values->Strings
         * Enable Internet access for your App. Tip: Manifest
@@ -57,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
         */
-
+        WebView myWebView = new WebView( this);
+        setContentView(myWebView);
+        myWebView.loadUrl("https://his.se");
 
     }
 
