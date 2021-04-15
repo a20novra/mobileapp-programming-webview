@@ -19,16 +19,16 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
-    private WebViewClient myWebviewClient;
+    //private WebViewClient myWebviewClient;
 
     public void showExternalWebPage(){
-        WebView webView = new WebView(this); // external
+        //WebView webView = new WebView(this); // external
         myWebView.loadUrl("https://his.se"); //external
     }
 
     public void showInternalWebPage(){
-        WebViewClient myWebViewClient = new WebViewClient();
-        myWebView.setWebViewClient(myWebviewClient); //internal
+       // WebViewClient myWebViewClient = new WebViewClient();
+        //myWebView.setWebViewClient(myWebviewClient); //internal
         myWebView.loadUrl("file:///android_asset/duggaindex.html");
     }
 
@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         myWebView = (WebView) findViewById(R.id.my_webview);
+        WebViewClient myWebViewClient = new WebViewClient();
+        myWebView.setWebViewClient(myWebViewClient); //internal
+
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
